@@ -241,6 +241,10 @@ otp_expiry = 3600
 enabled = true
 host = "localhost"
 port = 1025
+user = "testuser"
+pass = "testpass"
+sender_name = "Local MailDev"
+admin_email = "local@maildev.com"
 
 # Uncomment to customize email template
 # [auth.email.template.invite]

@@ -70,31 +70,39 @@ export default function Avatar({
   };
 
   return (
-    <div>
+    <div className="flex flex-col items-center gap-4">
       {avatarUrl ? (
         <Image
           width={size}
           height={size}
           src={avatarUrl}
           alt="Avatar"
-          className="avatar image"
+          className="rounded-full object-cover border-2 border-foreground/10"
           style={{ height: size, width: size }}
         />
       ) : (
         <div
-          className="avatar no-image"
+          className="rounded-full bg-foreground/5 border-2 border-foreground/10 flex items-center justify-center"
           style={{ height: size, width: size }}
-        />
+        >
+          <svg
+            className="w-1/2 h-1/2 text-foreground/20"
+            fill="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
+          </svg>
+        </div>
       )}
       <div style={{ width: size }}>
-        <label className="button primary block" htmlFor="single">
-          {uploading ? "Uploading ..." : "Upload"}
+        <label
+          className="inline-flex items-center justify-center w-full px-4 py-2 text-sm font-medium rounded-lg bg-foreground text-background hover:opacity-90 transition-opacity cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
+          htmlFor="single"
+        >
+          {uploading ? "Uploading..." : "Upload Avatar"}
         </label>
         <input
-          style={{
-            visibility: "hidden",
-            position: "absolute",
-          }}
+          className="hidden"
           type="file"
           id="single"
           accept="image/*"

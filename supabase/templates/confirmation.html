@@ -2,7 +2,8 @@
 <h2>Confirm your signup</h2>
 <p>Follow this link to confirm your account:</p>
 <p>
-  <a href="{{ .siteURL }}//auth/confirm?token_hash={{ .TokenHash }}&type=email"
-    >Confirm your account</a
+  <a
+    href="{{ .RedirectTo }}/auth/confirm?token_hash={{ .TokenHash }}&type=email"
+    >Confirm your mail</a
   >
 </p>

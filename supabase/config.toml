@@ -236,16 +236,6 @@ otp_expiry = 3600
 # admin_email = "admin@email.com"
 # sender_name = "Admin"
 
-# dev smtp setup
-[auth.email.smtp]
-enabled = true
-host = "localhost"
-port = 1025
-user = "testuser"
-pass = "testpass"
-sender_name = "Local MailDev"
-admin_email = "local@maildev.com"
-
 # Uncomment to customize email template
 # [auth.email.template.invite]
 # subject = "You have been invited"
